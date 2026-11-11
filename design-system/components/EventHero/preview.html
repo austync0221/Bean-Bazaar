@@ -1,0 +1,31 @@
+<!-- @dsCard group="Layout" height=260 subtitle="Auto-advancing landing carousel" -->
+<meta charset="utf-8"><link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Raleway:wght@200;300&display=swap">
+<style>
+  body{margin:0;background:var(--surface-page);font-family:var(--font-body)}
+  .hero{position:relative;height:240px;overflow:hidden;
+    background:
+      repeating-radial-gradient(ellipse 14px 9px at 30% 40%, var(--band-dark) 0 3px, var(--ink-heading) 3px 6px, var(--surface-page) 6px 9px),
+      var(--surface-page);}
+  .slide{position:absolute;inset:0;padding:24px 28px;opacity:0;transition:opacity .4s}
+  .slide.on{opacity:1}
+  .t{font-family:var(--font-display);font-size:64px;line-height:.8;letter-spacing:-.04em;color:var(--ink-heading);margin:0}
+  .d{font-size:11px;font-weight:200;line-height:1.05;color:var(--ink-body);text-align:justify;width:300px;margin-top:8px}
+  .fp{font-size:8px;font-weight:200;color:var(--ink-muted);margin-top:6px}
+  .dots{position:absolute;bottom:8px;right:12px;display:flex;gap:3px}
+  .dots i{width:5px;height:5px;border-radius:var(--radius-blob);background:var(--ink-muted)}
+  .dots i.on{background:var(--ink-heading)}
+</style>
+<div class="hero">
+  <div class="slide on"><div class="t">Bean Bazaar</div><div class="d">Forty specialty roasters, one hall. Cup, compare and carry home whole beans from twelve origins across two caffeinated days.</div><div class="fp">Nov 21–22 · Pier 9 Hall · Tickets $18 + fees · No refunds</div></div>
+  <div class="slide"><div class="t">Flash Sale</div><div class="d">Sunday from 3pm, every natural-process lot is 40% off while it lasts. First come, first brewed.</div><div class="fp">Limit 2 bags per guest · Card only</div></div>
+  <div class="slide"><div class="t">Cupping Lab</div><div class="d">Hourly guided tastings with the Q-graders. Seats are limited and are not guaranteed with entry.</div><div class="fp">Sign-up closes at 10am each day</div></div>
+  <div class="dots"><i class="on"></i><i></i><i></i></div>
+</div>
+<script>
+  (function(){
+    var s=document.querySelectorAll('.slide'),d=document.querySelectorAll('.dots i'),i=0;
+    var ms=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--carousel-advance'))||2500;
+    setInterval(function(){s[i].classList.remove('on');d[i].classList.remove('on');i=(i+1)%s.length;s[i].classList.add('on');d[i].classList.add('on');},ms);
+  })();
+</script>

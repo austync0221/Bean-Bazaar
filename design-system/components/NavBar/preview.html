@@ -1,0 +1,22 @@
+<!-- @dsCard group="Navigation" height=150 subtitle="Header band with roaster menu" -->
+<meta charset="utf-8"><link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Raleway:wght@200;300&display=swap">
+<style>
+  body{margin:0;background:var(--surface-page);font-family:var(--font-body)}
+  .nav{background:var(--band-dark);display:flex;align-items:center;gap:var(--space-2);padding:var(--space-3) 10px;position:relative}
+  .logo{font-family:var(--font-display);font-size:24px;color:var(--band-ink);margin-right:14px;line-height:.8}
+  .item{font-size:9px;letter-spacing:.25em;color:var(--band-ink);position:relative;cursor:pointer;padding:2px}
+  .menu{display:none;position:absolute;top:14px;left:0;background:var(--surface-card);padding:var(--space-3);white-space:nowrap;z-index:2}
+  .item:hover .menu{display:block}
+  .menu span{display:block;font-size:9px;color:var(--ink-muted);padding:2px 0}
+  .p{padding:10px;font-size:11px;font-weight:200;line-height:1.05;color:var(--ink-body);text-align:justify;max-width:420px}
+  .p a{color:var(--link);text-decoration:none}
+</style>
+<div class="nav">
+  <div class="logo">Bean Bazaar</div>
+  <div class="item">TICKETS</div>
+  <div class="item">ROASTERS<div class="menu"><span>ETHIOPIA</span><span>COLOMBIA</span><span>SUMATRA</span></div></div>
+  <div class="item">SCHEDULE</div>
+  <div class="item">🛒</div>
+</div>
+<p class="p">Forty roasters, one weekend. Meet the farmers <a href="#">more</a>. Sunday flash sale on natural-process lots <a href="#">more</a>. Getting to the hall <a href="#">more</a>.</p>
