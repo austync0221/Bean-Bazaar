@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coffees and roasters · Bean Bazaar</title>
+<meta name="description" content="Compare every coffee at Bean Bazaar by origin, roast, price and price per 100g.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Raleway:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="promo">Sunday flash sale: 40% off every natural-process lot from 3pm. <a href="schedule.html#sunday">See Sunday's schedule</a></div>
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="index.html">Bean Bazaar</a>
+      <ul class="nav-list">
+        <li><a class="item" href="tickets.html">Tickets</a></li>
+        <li class="has-menu">
+          <button class="item" type="button" aria-expanded="false" aria-controls="roaster-menu">Roasters ▾</button>
+          <ul class="menu" id="roaster-menu">
+            <li><a href="vendors.html" aria-current="page">All coffees</a></li>
+            <li><a href="vendors.html#roasters">Meet the roasters</a></li>
+          </ul>
+        </li>
+        <li><a class="item" href="schedule.html">Schedule</a></li>
+      </ul>
+      <a class="item cart-link" href="cart.html">🛒 Cart (<span data-cart-count>0</span>)</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="section"><div class="wrap">
+  <h1 style="font-size:clamp(32px,5vw,44px)">Compare the coffees</h1>
+  <p style="margin-top:var(--space-2)">Every lot shows its origin, process, roast and tasting notes, with the price per 100 g so different bag sizes compare fairly.</p>
+  <form class="toolbar" aria-label="Filter and sort coffees" onsubmit="return false">
+    <div class="fld"><label for="f-origin">Origin</label><select id="f-origin" class="f"><option value="">All origins</option></select></div>
+    <div class="fld"><label for="f-roast">Roast</label><select id="f-roast" class="f"><option value="">All roasts</option><option value="1">Extra light</option><option value="2">Light</option><option value="3">Medium</option><option value="4">Dark</option></select></div>
+    <div class="fld"><label for="f-sort">Sort by</label><select id="f-sort" class="f"><option value="name">Name (A–Z)</option><option value="per100">Price per 100 g (low to high)</option><option value="price">Bag price (low to high)</option><option value="roast">Roast (light to dark)</option></select></div>
+    <div class="fld"><label class="opt" style="margin:0;min-height:var(--target-min);align-items:center"><input type="checkbox" id="f-stock"> In stock only</label></div>
+  </form>
+  <p class="fine" id="lot-count" aria-live="polite"></p>
+  <div class="grid" id="lots"></div>
+</div></section>
+
+<section class="section" id="roasters" aria-labelledby="ro-h" style="padding-top:0"><div class="wrap">
+  <h2 id="ro-h">Meet the roasters</h2>
+  <ul class="facts" style="margin-top:var(--space-3)">
+    <li><strong>Ember &amp; Oak</strong>Light roasts for pour-over, sourced direct from Ethiopian washing stations. Stand 4.</li>
+    <li><strong>Slow Pour Co.</strong>Fruit-forward naturals and Kenyan washed lots, great as espresso. Stand 11.</li>
+    <li><strong>Night Owl Roasters</strong>Deep, syrupy dark roasts and a sugarcane decaf. Stand 17.</li>
+    <li><strong>Copper Kettle</strong>Everyday Latin American coffees at friendly prices. Stand 23.</li>
+  </ul>
+</div></section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div><h2>Bean Bazaar</h2><p>Forty roasters. Two days. One very good cup.</p></div>
+    <div><h2>Visit</h2><p>Nov 21–22, 2026<br>Pier 9 Hall<br>10am – 6pm both days</p></div>
+    <div><h2>Explore</h2><ul><li><a href="tickets.html">Tickets</a></li><li><a href="vendors.html">Coffees and roasters</a></li><li><a href="schedule.html">Schedule</a></li><li><a href="cart.html">Your cart</a></li></ul></div>
+  </div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

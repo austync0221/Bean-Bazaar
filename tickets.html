@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tickets · Bean Bazaar</title>
+<meta name="description" content="Buy day and weekend passes for Bean Bazaar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Raleway:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="promo">Sunday flash sale: 40% off every natural-process lot from 3pm. <a href="schedule.html#sunday">See Sunday's schedule</a></div>
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="index.html">Bean Bazaar</a>
+      <ul class="nav-list">
+        <li><a class="item" href="tickets.html" aria-current="page">Tickets</a></li>
+        <li class="has-menu">
+          <button class="item" type="button" aria-expanded="false" aria-controls="roaster-menu">Roasters ▾</button>
+          <ul class="menu" id="roaster-menu">
+            <li><a href="vendors.html">All coffees</a></li>
+            <li><a href="vendors.html#roasters">Meet the roasters</a></li>
+          </ul>
+        </li>
+        <li><a class="item" href="schedule.html">Schedule</a></li>
+      </ul>
+      <a class="item cart-link" href="cart.html">🛒 Cart (<span data-cart-count>0</span>)</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="section"><div class="wrap layout-2">
+  <div>
+    <h1 style="font-size:clamp(32px,5vw,44px)">Tickets</h1>
+    <p style="margin-top:var(--space-2)">All prices include fees. Children under 12 go free. Refunds are available until Nov 19.</p>
+    <form id="ticket-form" class="form" novalidate>
+      <fieldset class="ticket-types">
+        <legend>Ticket type</legend>
+        <label class="opt"><input type="radio" name="type" value="day" checked><span><b>Day pass · $18</b><span class="fine">Saturday or Sunday, all stands and free sessions.</span></span></label>
+        <label class="opt"><input type="radio" name="type" value="weekend"><span><b>Weekend pass · $30</b><span class="fine">Both days, all stands and free sessions.</span></span></label>
+        <label class="opt"><input type="radio" name="type" value="cupping"><span><b>Weekend pass + Cupping Lab · $42</b><span class="fine">Both days plus every ticketed session.</span></span></label>
+      </fieldset>
+      <div class="fld"><label for="qty">Number of tickets (required)</label><input id="qty" name="qty" class="f" type="number" min="1" max="10" value="2" inputmode="numeric" aria-describedby="qty-m"><p id="qty-m" class="msg"></p></div>
+      <div class="two">
+        <div class="fld"><label for="name">Full name (required)</label><input id="name" name="name" class="f" autocomplete="name" placeholder="e.g. Ada Roaster" aria-describedby="name-m"><p id="name-m" class="msg"></p></div>
+        <div class="fld"><label for="email">Email (required)</label><input id="email" name="email" class="f" type="email" autocomplete="email" placeholder="name@example.com" aria-describedby="email-m"><p id="email-m" class="msg"></p></div>
+      </div>
+      <button class="bb-btn" type="submit">Buy tickets</button>
+      <p id="form-status" class="msg" tabindex="-1" role="status" style="margin-top:var(--space-2)"></p>
+    </form>
+  </div>
+  <aside class="summary" aria-labelledby="sum-h">
+    <h2 id="sum-h" style="font-size:20px">Order summary</h2>
+    <p id="t-line" style="margin:var(--space-2) 0 var(--space-1)"></p>
+    <p class="total" id="t-total" aria-live="polite"></p>
+    <p class="fine">Prices include a $2 service fee per ticket. Refunds until Nov 19.</p>
+  </aside>
+</div></section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div><h2>Bean Bazaar</h2><p>Forty roasters. Two days. One very good cup.</p></div>
+    <div><h2>Visit</h2><p>Nov 21–22, 2026<br>Pier 9 Hall<br>10am – 6pm both days</p></div>
+    <div><h2>Explore</h2><ul><li><a href="tickets.html">Tickets</a></li><li><a href="vendors.html">Coffees and roasters</a></li><li><a href="schedule.html">Schedule</a></li><li><a href="cart.html">Your cart</a></li></ul></div>
+  </div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>
